@@ -20,5 +20,5 @@ Mostly used keybinds
 | C-c C-< | New cursor for all like this |
 | C-c C-> | New cursor for all, "DWIM" |
 | C-= | Expand region |
-| C-x <up,down,left,right> | Jump to window |
+| C-x {up,down,left,right} | Jump to window |
 | C-c ' | Cycle quotes |
