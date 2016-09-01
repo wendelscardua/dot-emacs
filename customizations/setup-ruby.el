@@ -1,5 +1,6 @@
 (add-hook 'inf-ruby-mode-hook (lambda () (company-mode -1)))
 (setq ruby-insert-encoding-magic-comment nil)
+(setq ruby-align-chained-calls 1)
 (define-key ruby-mode-map (kbd "C-c '") #'cycle-quotes)
 (define-key ruby-mode-map (kbd "C-c M-j")
   (lambda ()
