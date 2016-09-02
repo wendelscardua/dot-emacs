@@ -131,5 +131,11 @@ If point was already at that position, move point to beginning of line."
 (require 'edit-server)
 (edit-server-start)
 
+(require 'editorconfig)
+(editorconfig-mode 1)
+
+(undo-tree-mode 1)
+(global-set-key (kbd "C-M--") 'undo-tree-visualize)
+
 (provide 'editing)
 ;;; editing.el ends here
