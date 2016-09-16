@@ -12,7 +12,7 @@
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
-    ("52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default)))
+    ("84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default)))
  '(github-notifier-token "4cd24421b5df4299f4aaf6707cf7c588cf4a0b0e")
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized)))))

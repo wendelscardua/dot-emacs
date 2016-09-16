@@ -107,15 +107,17 @@
 (setq-default truncate-lines t)
 
 ;; powerline
-(require 'powerline)
-(powerline-default-theme)
+;;(require 'powerline)
+;;(powerline-default-theme)
+
+(setq sml/theme 'powerline)
+(sml/setup)
 
 ;; window navigation
 (global-set-key (kbd "C-x <down>") 'window-jump-down)
 (global-set-key (kbd "C-x <up>") 'window-jump-up)
 (global-set-key (kbd "C-x <left>") 'window-jump-left)
 (global-set-key (kbd "C-x <right>") 'window-jump-right)
-  
 
 (provide 'ui)
 ;;; ui.el ends here
