@@ -50,6 +50,10 @@
   (load "setup-ruby.el"))
 
 (load "setup-js.el")
+
+;; Secret things (e.g. github tokens)
+(load "private.el")
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
