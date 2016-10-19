@@ -44,3 +44,6 @@
 (global-set-key (kbd "C-c t") 'get-term)
 (global-set-key (kbd "C-c <left>") 'multi-term-prev)
 (global-set-key (kbd "C-c <right>") 'multi-term-next)
+
+;; twittering-mode
+(setq twittering-use-master-password t)
