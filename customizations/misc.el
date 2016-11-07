@@ -13,7 +13,7 @@
 
 ;; Projectile (?)
 (setq projectile-switch-project-action #'projectile-commander)
-(projectile-global-mode)
+(projectile-mode)
 
 ;; flycheck
 
@@ -23,7 +23,6 @@
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g b") 'magit-blame)
 (global-set-key (kbd "C-c g c") 'magit-checkout)
-(global-set-key (kbd "C-c g r b") 'magit-rebase)
 
 ;; multi-term
 (defun last-term-buffer (l)
@@ -47,3 +46,6 @@
 
 ;; twittering-mode
 (setq twittering-use-master-password t)
+
+;; auto revert
+(auto-revert-mode)
