@@ -35,14 +35,16 @@
 
 (eval-after-load "hideshow"
   '(add-to-list 'hs-special-modes-alist
-    `(ruby-mode
-      ,(rx (or "def" "class" "module" "do" "{" "[" "case")) ; Block start
-      ,(rx (or "}" "]" "end"))                       ; Block end
-      ,(rx (or "#" "=begin"))                        ; Comment start
-      ruby-forward-sexp nil)))
+                `(ruby-mode
+                  ,(rx (or "def" "class" "module" "do" "{" "[" "case")) ; Block start
+                  ,(rx (or "}" "]" "end"))                       ; Block end
+                  ,(rx (or "#" "=begin"))                        ; Comment start
+                  ruby-forward-sexp nil)))
 
 (global-set-key (kbd "C-c h") 'hs-hide-block)
 (global-set-key (kbd "C-c s") 'hs-show-block)
+
+(define-key ruby-mode-map (kbd "C-!") #'rubocop-autocorrect-current-file)
 
 (provide 'setup-ruby)
 ;;; setup-ruby.el ends here
