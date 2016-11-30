@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "inf-ruby" "inf-ruby.el" (22546 16714 798925
-;;;;;;  221000))
+;;;### (autoloads nil "inf-ruby" "inf-ruby.el" (22589 47387 419022
+;;;;;;  80000))
 ;;; Generated autoloads from inf-ruby.el
 
 (defvar ruby-source-modes '(ruby-mode enh-ruby-mode) "\
@@ -37,8 +37,11 @@ run).
 \(fn &optional IMPL)" t nil)
 
 (autoload 'run-ruby "inf-ruby" "\
-Run an inferior Ruby process, input and output via buffer `*NAME*'.
-If there is a process already running in `*NAME*', switch to that buffer.
+Run an inferior Ruby process in a buffer related to the current project.
+If there is a process already running in a corresponding buffer,
+switch to that buffer. Otherwise create a new buffer.
+The consecutive buffer names will be:
+`*NAME*', `*NAME*<2>', `*NAME*<3>' and so on.
 
 NAME defaults to \"ruby\". COMMAND defaults to the default entry
 in `inf-ruby-implementations'.
@@ -55,10 +58,15 @@ keymaps to bind `inf-ruby-switch-from-compilation' to `С-x C-q'.
 
 (autoload 'inf-ruby-console-auto "inf-ruby" "\
 Run the appropriate Ruby console command.
-The command and and the directory to run it from are detected
+The command and the directory to run it from are detected
 automatically.
 
 \(fn)" t nil)
+
+(autoload 'inf-ruby-console-zeus "inf-ruby" "\
+Run Rails console in DIR using Zeus.
+
+\(fn DIR)" t nil)
 
 (autoload 'inf-ruby-console-rails "inf-ruby" "\
 Run Rails console in DIR.
@@ -92,11 +100,6 @@ Run custom console.rb, Pry, or bundle console, in DIR.
 
 \(fn FILE REGEXP &optional MATCH-GROUP)" nil nil)
  (dolist (mode ruby-source-modes) (add-hook (intern (format "%s-hook" mode)) 'inf-ruby-minor-mode))
-
-;;;***
-
-;;;### (autoloads nil nil ("inf-ruby-pkg.el") (22546 16714 800760
-;;;;;;  708000))
 
 ;;;***
 
