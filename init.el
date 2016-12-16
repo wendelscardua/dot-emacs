@@ -39,7 +39,7 @@
 (load "editing.el")
 
 ;; Hard-to-categorize customizations
-(load "misc.el")
+(load "miscelaneous.el")
 
 ;; For editing lisps
 (load "elisp-editing.el")
