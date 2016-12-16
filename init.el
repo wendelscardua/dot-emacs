@@ -18,14 +18,14 @@
  '(paradox-github-token t t)
  '(safe-local-variable-values (quote ((encoding . utf-8)))))
 
-;;(require 'evil)
-;;(evil-mode 1)
-
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
 (load "shell-integration.el")
+
+;; Secret things (e.g. github tokens)
+(load "private.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
@@ -51,9 +51,6 @@
   (load "setup-ruby.el"))
 
 (load "setup-js.el")
-
-;; Secret things (e.g. github tokens)
-(load "private.el")
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
