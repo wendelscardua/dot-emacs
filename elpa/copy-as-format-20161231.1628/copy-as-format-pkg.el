@@ -1,0 +1,1 @@
+(define-package "copy-as-format" "20161231.1628" "Copy buffer locations as GitHub/Slack/JIRA/HipChat/... formatted text" '((cl-lib "0.5")) :stars '("") :url "https://github.com/sshaw/copy-as-format" :keywords '("github" "slack" "jira" "hipchat" "gitlab" "bitbucket" "tools" "convenience"))
