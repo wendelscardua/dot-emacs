@@ -31,7 +31,11 @@
 (add-hook 'ruby-mode-hook #'smartparens-mode)
 
 (add-hook 'ruby-mode-hook
-  (lambda () (hs-minor-mode)))
+          (lambda () (hs-minor-mode)))
+
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(setq-default web-mode-auto-close-style 2)
+(setq-default web-mode-markup-indent-offset 2)
 
 (eval-after-load "hideshow"
   '(add-to-list 'hs-special-modes-alist
