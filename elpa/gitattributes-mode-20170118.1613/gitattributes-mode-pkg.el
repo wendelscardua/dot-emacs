@@ -1,0 +1,1 @@
+(define-package "gitattributes-mode" "20170118.1613" "Major mode for editing .gitattributes files" 'nil :stars '(#("160" 0 3 (font-lock-face paradox-star-face))) :url "https://github.com/magit/git-modes" :keywords '("convenience" "vc" "git"))
