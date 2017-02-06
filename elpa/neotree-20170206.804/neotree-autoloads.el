@@ -3,7 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "neotree" "neotree.el" (22680 40783 43685 384000))
+;;;### (autoloads nil "neotree" "neotree.el" (22680 51499 611143
+;;;;;;  232000))
 ;;; Generated autoloads from neotree.el
 
 (autoload 'neotree-find "neotree" "\
@@ -48,7 +49,8 @@ Show the NeoTree window.")
 
 ;;;***
 
-;;;### (autoloads nil nil ("neotree-pkg.el") (22680 40783 47717 6000))
+;;;### (autoloads nil nil ("neotree-pkg.el") (22680 51499 627924
+;;;;;;  537000))
 
 ;;;***
 
