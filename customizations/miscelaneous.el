@@ -49,3 +49,7 @@
 
 ;; auto revert
 (auto-revert-mode)
+
+(require 'button-lock)
+(require 'fixmee)
+(global-fixmee-mode 1)
