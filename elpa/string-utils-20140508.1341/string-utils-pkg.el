@@ -1,0 +1,1 @@
+(define-package "string-utils" "20140508.1341" "String-manipulation utilities" '((list-utils "0.4.2")) :stars '(#("9" 0 1 (font-lock-face paradox-star-face))) :url "http://github.com/rolandwalker/string-utils" :keywords '("extensions"))

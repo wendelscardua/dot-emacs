@@ -1,0 +1,1 @@
+(define-package "button-lock" "20150223.554" "Clickable text defined by regular expression" 'nil :stars '(#("22" 0 2 (font-lock-face paradox-star-face))) :url "http://github.com/rolandwalker/button-lock" :keywords '("mouse" "button" "hypermedia" "extensions"))
