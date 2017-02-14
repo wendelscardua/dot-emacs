@@ -21,4 +21,12 @@ Mostly used keybinds
 | C-c C-> | New cursor for all, "DWIM" |
 | C-= | Expand region |
 | C-x {up,down,left,right} | Jump to window |
+| C-. | ace-jump |
 | C-c ' | Cycle quotes |
+| C-c g b | Magit Blame |
+| C-c g c | Magit Checkout |
+| C-c g d | Magit Diff |
+| C-c g s | Magit Status |
+| C-c g t | Git Timemachine |
+| C-M-- | Undo Tree Visualize |
+| C-! | Rubocop autocorrect current file |
