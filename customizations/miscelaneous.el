@@ -20,9 +20,11 @@
 (global-flycheck-mode)
 
 ;; magit
-(global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g b") 'magit-blame)
 (global-set-key (kbd "C-c g c") 'magit-checkout)
+(global-set-key (kbd "C-c g d") 'magit-diff-buffer-file-popup)
+(global-set-key (kbd "C-c g s") 'magit-status)
+(global-set-key (kbd "C-c g t") 'git-timemachine)
 
 ;; multi-term
 (defun last-term-buffer (l)
