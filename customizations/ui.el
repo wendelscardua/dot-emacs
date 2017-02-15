@@ -122,5 +122,10 @@
 ;; ace-jump-mode
 (global-set-key (kbd "C-.") 'ace-jump-mode)
 
+;; set threshold for window splitting
+(setq split-height-threshold nil)
+(setq split-width-threshold 80)
+
+
 (provide 'ui)
 ;;; ui.el ends here
