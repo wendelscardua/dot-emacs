@@ -123,10 +123,6 @@
 ;; ace-jump-mode
 (global-set-key (kbd "C-.") 'ace-jump-mode)
 
-;; pomidor
-(global-set-key (kbd "<f12>") #'pomidor)
-(setq alert-default-style 'libnotify)
-
 ;; set threshold for window splitting
 (defun split-window-width-or-height (&optional window)
   (let ((window (or window (selected-window))))
