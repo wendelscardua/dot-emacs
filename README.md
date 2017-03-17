@@ -29,4 +29,4 @@ Mostly used keybinds
 | C-c g s | Magit Status |
 | C-c g t | Git Timemachine |
 | C-M-- | Undo Tree Visualize |
-| C-! | Rubocop autocorrect current file |
+| C-c c | Rubocop autocorrect current file |

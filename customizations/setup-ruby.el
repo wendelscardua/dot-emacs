@@ -49,7 +49,7 @@
 (global-set-key (kbd "C-c h") 'hs-hide-block)
 (global-set-key (kbd "C-c s") 'hs-show-block)
 
-(define-key ruby-mode-map (kbd "C-!") #'rubocop-autocorrect-current-file)
+(define-key ruby-mode-map (kbd "C-c c") #'rubocop-autocorrect-current-file)
 
 (provide 'setup-ruby)
 ;;; setup-ruby.el ends here
