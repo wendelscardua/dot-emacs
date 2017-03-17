@@ -34,7 +34,7 @@
           (lambda () (hs-minor-mode)))
 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.\\(builder\\)\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(arb\\|builder\\)\\'" . ruby-mode))
 (setq-default web-mode-auto-close-style 2)
 (setq-default web-mode-markup-indent-offset 2)
 
