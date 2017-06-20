@@ -122,6 +122,7 @@
 
 ;; ace-jump-mode
 (global-set-key (kbd "C-.") 'ace-jump-mode)
+(global-set-key (kbd "C-,") 'ace-jump-char-mode)
 
 ;; set threshold for window splitting
 (defun split-window-width-or-height (&optional window)

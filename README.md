@@ -22,6 +22,7 @@ Mostly used keybinds
 | C-= | Expand region |
 | C-x {up,down,left,right} | Jump to window |
 | C-. | ace-jump |
+| C-, | ace-jump-char |
 | C-c ' | Cycle quotes |
 | C-c g b | Magit Blame |
 | C-c g c | Magit Checkout |
