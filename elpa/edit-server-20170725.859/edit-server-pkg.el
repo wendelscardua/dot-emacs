@@ -1,0 +1,1 @@
+(define-package "edit-server" "20170725.859" "server that responds to edit requests from Chrome" 'nil :stars '(#("269" 0 3 (font-lock-face paradox-star-face))) :commit "462c57be72b3a8652f705bde0d3b7cd2f79644fa" :url "https://github.com/stsquad/emacs_chrome")
