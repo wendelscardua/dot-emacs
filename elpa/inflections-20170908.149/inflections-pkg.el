@@ -1,0 +1,1 @@
+(define-package "inflections" "20170908.149" "convert english words between singular and plural" '((cl-lib "0.5") (emacs "24")) :stars '(#("38" 0 2 (font-lock-face paradox-star-face))) :commit "40a7ffdf734ffe7d1968909663146255d7ba69c8" :url "https://github.com/eschulte/jump.el" :keywords '("languages" "tools" "wp"))
