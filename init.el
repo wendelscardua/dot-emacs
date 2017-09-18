@@ -16,7 +16,8 @@
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(paradox-github-token t t)
- '(safe-local-variable-values (quote ((encoding . utf-8)))))
+ '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(tls-checktrust t))
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
