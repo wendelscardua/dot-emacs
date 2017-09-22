@@ -20,6 +20,7 @@
  '(tls-checktrust t))
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
+(add-to-list 'load-path "~/.emacs.d/custom-packages")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
