@@ -120,6 +120,9 @@
 (global-set-key (kbd "C-x <left>") 'window-jump-left)
 (global-set-key (kbd "C-x <right>") 'window-jump-right)
 
+;; window dedication
+(global-set-key (kbd "C-x 4 C-d") 'dedicate-window-toggle)
+
 ;; ace-jump-mode
 (global-set-key (kbd "C-.") 'ace-jump-mode)
 (global-set-key (kbd "C-,") 'ace-jump-char-mode)

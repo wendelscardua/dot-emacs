@@ -21,6 +21,8 @@ Mostly used keybinds
 | C-c C-> | New cursor for all, "DWIM" |
 | C-= | Expand region |
 | C-x {up,down,left,right} | Jump to window |
+| C-x 4 C-d | Toggle dedicate window |
+| C-x C-b | List buffers |
 | C-. | ace-jump |
 | C-, | ace-jump-char |
 | C-c ' | Cycle quotes |
