@@ -89,7 +89,7 @@
       (add-to-list 'dedicated-windows-by-hand window)
       (setq mode-line-format
             (append `(,dedicated-window-lighter-string) mode-line-format))
-      (setq window-size-fixed t)
+      ;;(setq window-size-fixed t)
       (set-window-dedicated-p window flag))))
 
 (defun undedicate-window (&optional window)
@@ -105,7 +105,7 @@
               (remove window dedicated-windows-by-hand))
         (setq mode-line-format
               (remove dedicated-window-lighter-string mode-line-format))
-        (setq window-size-fixed nil)
+        ;;(setq window-size-fixed nil)
         (set-window-dedicated-p window nil)))))
 
 (defun dedicate-window-toggle (&optional window)
