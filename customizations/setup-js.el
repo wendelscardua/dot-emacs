@@ -20,3 +20,10 @@
             (setq coffee-cleanup-whitespace nil)))
 (custom-set-variables
  '(coffee-tab-width 2))
+
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hdbs\\'" . web-mode))
+(add-to-list 'web-mode-engines-alist
+             '(("handlebars" . "\\.hdbs\\'")))
