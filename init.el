@@ -25,6 +25,11 @@
 (add-to-list 'load-path "~/.emacs.d/custom-packages")
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+;; Temporary workaround for powerline slow project detection
+(setq projectile-mode-line
+      '(:eval (format " Projectile[%s(%s)]"
+                      (projectile-project-name))))
+
 ;; Loads custom packages
 (load "dedicate-windows-manually.el")
 
