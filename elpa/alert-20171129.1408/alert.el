@@ -6,7 +6,7 @@
 ;; Created: 24 Aug 2011
 ;; Updated: 16 Mar 2015
 ;; Version: 1.2
-;; Package-Version: 20171024.1907
+;; Package-Version: 20171129.1408
 ;; Package-Requires: ((gntp "0.1") (log4e "0.3.0"))
 ;; Keywords: notification emacs message
 ;; X-URL: https://github.com/jwiegley/alert
