@@ -150,5 +150,8 @@
 
 (setq split-window-preferred-function #'split-window-width-or-height)
 
+;; dimmer
+(dimmer-mode)
+
 (provide 'ui)
 ;;; ui.el ends here

@@ -12,13 +12,13 @@
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
-    ("5999e12c8070b9090a2a1bbcd02ec28906e150bb2cdce5ace4f965c76cf30476" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default)))
+    ("8ed752276957903a270c797c4ab52931199806ccd9f0c3bb77f6f4b9e71b9272" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "5999e12c8070b9090a2a1bbcd02ec28906e150bb2cdce5ace4f965c76cf30476" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default)))
  '(feature-use-docker-compose nil)
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (monokai-theme color-theme-sanityinc-tomorrow typescript-mode csharp-mode yaml-mode xkcd window-jump web-mode web-completion-data undo-tree twittering-mode tangotango-theme tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer pomidor paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine flycheck-clojure fixmee feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify editorconfig edit-server dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game)))
+    (dimmer monokai-theme color-theme-sanityinc-tomorrow typescript-mode csharp-mode yaml-mode xkcd window-jump web-mode web-completion-data undo-tree twittering-mode tangotango-theme tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer pomidor paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine flycheck-clojure fixmee feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify editorconfig edit-server dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game)))
  '(paradox-github-token t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tls-checktrust t))
