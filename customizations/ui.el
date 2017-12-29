@@ -28,7 +28,8 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'tangotango t)
+;;(load-theme 'tangotango t)
+(load-theme 'monokai)
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :family "mononoki" :height 80)
