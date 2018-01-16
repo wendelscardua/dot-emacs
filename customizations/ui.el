@@ -150,6 +150,9 @@
 
 (setq split-window-preferred-function #'split-window-width-or-height)
 
+;; ag
+(setq ag-reuse-buffers t)
+(setq ag-highlight-search t)
 
 ;; better ido decorations
 (setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
