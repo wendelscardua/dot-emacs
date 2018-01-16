@@ -34,11 +34,6 @@
 ;; increase font size for better readability
 (set-face-attribute 'default nil :family "mononoki" :height 110)
 
-;; Uncomment the lines below by removing semicolons and play with the
-;; values in order to set the width (in characters wide) and height
-;; (in lines high) Emacs will have whenever you start it
-;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 177) (height . 53)))
-
 ;; These settings relate to how emacs interacts with your operating system
 (setq
  ;; makes killing/yanking interact with the clipboard
@@ -75,26 +70,9 @@
 ;; prettify things
 (global-prettify-symbols-mode +1)
 
-;; (defconst endless/clojure-prettify-alist '())
-
-;; (add-to-list 'endless/clojure-prettify-alist
-             ;; '(">=" . ?≥))
-
-;; (add-to-list 'endless/clojure-prettify-alist
-             ;; '("<=" . ?≤))
-
-;; (eval-after-load 'clojure-mode
-;;   '(setq clojure--prettify-symbols-alist
-;;          (append endless/clojure-prettify-alist
-;;                  clojure--prettify-symbols-alist)))
-;; (eval-after-load 'lisp-mode
-;;   '(setq lisp--prettify-symbols-alist
-;;          (append endless/clojure-prettify-alist
-;;                  lisp--prettify-symbols-alist)))
-
 ;; mouse wheel & keyboard scroll one line at a time
 ;; scroll one line at a time (less "jumpy" than defaults)
-    
+
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
     
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
