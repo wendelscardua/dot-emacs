@@ -22,7 +22,8 @@
     (dimmer monokai-theme color-theme-sanityinc-tomorrow typescript-mode csharp-mode yaml-mode xkcd window-jump web-mode web-completion-data undo-tree twittering-mode tangotango-theme tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer pomidor paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine flycheck-clojure fixmee feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify editorconfig edit-server dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game)))
  '(paradox-github-token t t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
- '(tls-checktrust t))
+ '(tls-checktrust t)
+ '(enh-ruby-add-encoding-comment-on-save f))
 
 (add-to-list 'load-path "~/.emacs.d/custom-packages")
 (add-to-list 'load-path "~/.emacs.d/customizations")
