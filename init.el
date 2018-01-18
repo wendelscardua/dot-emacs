@@ -24,11 +24,12 @@
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tls-checktrust t))
 
-(add-to-list 'load-path "~/.emacs.d/custom-packages")
 (add-to-list 'load-path "~/.emacs.d/customizations")
+(add-to-list 'load-path "~/.emacs.d/custom-packages")
 
 ;; Loads custom packages
 (load "dedicate-windows-manually.el")
+(load "magit-helpers.el")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
