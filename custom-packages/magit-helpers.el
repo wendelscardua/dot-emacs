@@ -54,4 +54,6 @@
           (magit-run-git "branch" "-d" bad-branches))))
   (magit-checkout "master")
   (magit-show-refs-popup))
+
+(magit-define-popup-action 'magit-branch-popup ?z "Cleanup" 'wendel-magit/cleanup-branches)
 ;;; magit-helpers.el ends here
