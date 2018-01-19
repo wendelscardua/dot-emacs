@@ -53,5 +53,15 @@
 
 (define-key ruby-mode-map (kbd "C-c c") #'rubocop-autocorrect-current-file)
 
+(defun wendel-ruby/rubocop-changed-files ()
+  "Autocorrect changed files with rubocop, if changed compared to upstream."
+  (interactive)
+  (require 'rubocop)
+  (let ((changed-files (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref))))
+    (seq-doseq (changed-file changed-files)
+      (rubocop--dir-command rubocop-autocorrect-command changed-file))))
+
+(define-key ruby-mode-map (kbd "C-c x") #'wendel-ruby/rubocop-changed-files)
+
 (provide 'setup-ruby)
 ;;; setup-ruby.el ends here
