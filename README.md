@@ -1,7 +1,7 @@
 Personal `.emacs.d`
 ===================
 
-This is my personal Emacs configuration (I'm currently using Emacs 24.5.1)
+This is my personal Emacs configuration (I'm currently using Emacs 25.2.2)
 
 It's currently used for Ruby (and maybe Clojure) development.
 
@@ -33,3 +33,12 @@ Mostly used keybinds
 | C-c g t | Git Timemachine |
 | C-M-- | Undo Tree Visualize |
 | C-c c | Rubocop autocorrect current file |
+| C-c x | Rubocop autocorrect all changed files |
+
+Magit keybinds
+-----------------
+
+| Key    | Action |
+| :----- | :----- |
+| b z    | Cleanup merged branches |
+| b P    | Create Pull Request on Github |
