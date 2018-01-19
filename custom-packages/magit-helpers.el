@@ -44,6 +44,7 @@
 (defun wendel-magit/cleanup-branches ()
   "Delete merged branches."
   (interactive)
+  (message "Cleaning up branches...")
   (let ((masterish-branches (seq-filter #'wendel-magit/is-masterish (magit-list-branch-names))))
     (seq-doseq (masterish-branch masterish-branches)
       (magit-checkout masterish-branch)
@@ -56,5 +57,16 @@
   (magit-checkout "master")
   (magit-show-refs-popup))
 
+(defun wendel-magit/open-pull-request ()
+  "Opens a pull request for current branch on Github."
+  (interactive)
+  (browse-url
+   (format "%s/pull/new/%s"
+           (magit-get "remote"
+                      (magit-get-push-remote)
+                      "url")
+           (magit-get-current-branch))))
+
 (magit-define-popup-action 'magit-branch-popup ?z "Cleanup" 'wendel-magit/cleanup-branches)
+(magit-define-popup-action 'magit-branch-popup ?P "Pull Request" 'wendel-magit/open-pull-request)
 ;;; magit-helpers.el ends here
