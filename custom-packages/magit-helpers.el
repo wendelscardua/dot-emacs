@@ -52,7 +52,7 @@
       (magit-run-git "remote" "prune" "origin")))
   (magit-refresh)
   (let ((bad-branches (seq-remove #'wendel-magit/is-masterish (magit-list-merged-branches))))
-    (if (> (length bad-branches) 1)
+    (if (> (length bad-branches) 0)
         (magit-run-git "branch" "-d" bad-branches)))
   (magit-checkout "master")
   (magit-show-refs-popup))
