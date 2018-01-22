@@ -29,8 +29,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
 ;;(load-theme 'tangotango t)
-(load-theme 'monokai)
-
+;;(load-theme 'monokai)
+(load-theme 'solarized-dark)
 ;; increase font size for better readability
 (set-face-attribute 'default nil :family "mononoki" :height 110)
 
@@ -89,7 +89,7 @@
 ;;(require 'powerline)
 ;;(powerline-default-theme)
 
-(setq sml/theme 'powerline)
+(setq sml/theme 'solarized-dark)
 (sml/setup)
 
 ;; window navigation
