@@ -89,7 +89,7 @@
 ;;(require 'powerline)
 ;;(powerline-default-theme)
 
-(setq sml/theme 'solarized-dark)
+(setq sml/theme 'powerline)
 (sml/setup)
 
 ;; window navigation
