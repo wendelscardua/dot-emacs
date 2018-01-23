@@ -1,1 +1,0 @@
-(define-package "smartrep" "20150508.1930" "Support sequential operation which omitted prefix keys." 'nil :stars '(#("57" 0 2 (font-lock-face paradox-star-face))) :url "https://github.com/myuhe/smartrep.el" :keywords '("convenience"))
