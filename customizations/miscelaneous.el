@@ -57,8 +57,3 @@
 
 ;; auto revert
 (auto-revert-mode)
-
-;; fixme-e-e
-(require 'button-lock)
-(require 'fixmee)
-(global-fixmee-mode 1)
