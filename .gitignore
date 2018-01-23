@@ -1,0 +1,17 @@
+*.elc
+*.txt
+*~
+.mc-lists.el
+.recentf
+.smex-items
+/ac-comphist.dat
+/auto-save-list
+/backups
+/cider-history
+/games
+/ido.last
+/places
+/projectile*
+/var
+/xkcd
+private.el
