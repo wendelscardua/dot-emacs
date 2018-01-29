@@ -13,6 +13,7 @@
 /ido.last
 /places
 /projectile*
+/request
 /var
 /xkcd
 private.el
