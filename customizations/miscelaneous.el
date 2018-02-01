@@ -26,6 +26,12 @@
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g t") 'git-timemachine)
 
+;; spotify
+(global-set-key (kbd "<f9>") #'spotify-previous)
+(global-set-key (kbd "<f10>") #'spotify-pause)
+(global-set-key (kbd "<f11>") #'spotify-play)
+(global-set-key (kbd "<f12>") #'spotify-next)
+
 ;; multi-term
 (defun last-term-buffer (l)
   "Return most recently used term buffer."
