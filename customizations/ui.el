@@ -141,6 +141,9 @@
   (define-key ido-completion-map (kbd "<up>") 'ido-prev-match))
 (add-hook 'ido-setup-hook 'ido-define-keys)
 
+;; selection things
+(delete-selection-mode 1)
+
 ;; dimmer
 (dimmer-mode)
 
