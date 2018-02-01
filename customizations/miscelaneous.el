@@ -26,12 +26,6 @@
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g t") 'git-timemachine)
 
-;; pomidor
-(global-set-key (kbd "<f12>") #'pomidor)
-(setq alert-default-style 'libnotify
-      pomidor-sound-tick nil
-      pomidor-sound-tack nil)
-
 ;; multi-term
 (defun last-term-buffer (l)
   "Return most recently used term buffer."
