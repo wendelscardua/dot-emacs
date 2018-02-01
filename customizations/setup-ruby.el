@@ -59,7 +59,10 @@
   (let ((changed-files (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref))))
     (rubocop--dir-command rubocop-autocorrect-command (string-join changed-files " "))))
 
-(define-key ruby-mode-map (kbd "C-c x") #'wendel-ruby/rubocop-changed-files)
+(global-set-key (kbd "C-c x") #'wendel-ruby/rubocop-changed-files)
+
+;; Fixes pry in rspec-compilation mode
+(add-hook 'compilation-filter-hook 'inf-ruby-auto-enter)
 
 (provide 'setup-ruby)
 ;;; setup-ruby.el ends here
