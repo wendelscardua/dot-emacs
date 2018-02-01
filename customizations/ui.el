@@ -141,6 +141,12 @@
   (define-key ido-completion-map (kbd "<up>") 'ido-prev-match))
 (add-hook 'ido-setup-hook 'ido-define-keys)
 
+;; frame things
+(global-set-key (kbd "C-s-<up>") 'toggle-frame-maximized)
+(global-set-key (kbd "C-s-<down>") 'toggle-frame-maximized)
+(global-set-key (kbd "C-s-<right>") 'make-frame)
+(global-set-key (kbd "C-s-<left>") 'delete-frame)
+
 ;; selection things
 (delete-selection-mode 1)
 
