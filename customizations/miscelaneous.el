@@ -52,6 +52,31 @@
 (global-set-key (kbd "C-c <left>") 'multi-term-prev)
 (global-set-key (kbd "C-c <right>") 'multi-term-next)
 
+;; increment/decrement value in place
+(defun wendel/increment-number (&optional arg)
+  "Increment the number forward from point by ARG."
+  (interactive "p*")
+  (save-excursion
+    (save-match-data
+      (let (inc-by field-width answer)
+        (setq inc-by (if arg arg 1))
+        (skip-chars-backward "0123456789")
+        (when (re-search-forward "[0-9]+" nil t)
+          (setq field-width (- (match-end 0) (match-beginning 0)))
+          (setq answer (+ (string-to-number (match-string 0) 10) inc-by))
+          (when (< answer 0)
+            (setq answer (+ (expt 10 field-width) answer)))
+          (replace-match (format (concat "%0" (int-to-string field-width) "d")
+                                 answer)))))))
+
+(defun wendel/decrement-number (&optional arg)
+  "Decrement the number forward from point by ARG."
+  (interactive "p*")
+  (wendel/increment-number (if arg (- arg) -1)))
+
+(global-set-key (kbd "C-c +") 'wendel/increment-number)
+(global-set-key (kbd "C-c -") 'wendel/decrement-number)
+
 ;; twittering-mode
 (setq twittering-use-master-password t)
 
