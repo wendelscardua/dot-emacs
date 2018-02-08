@@ -53,6 +53,10 @@
       (magit-run-git "pull")
       (message "Remote prune origin %s" masterish-branch)
       (magit-run-git "remote" "prune" "origin")))
+  (if (not (equal "master" (magit-get-current-branch)))
+      (progn
+        (message "Checkout back to master")
+        (magit-checkout "master")))
   (magit-refresh)
   (let ((bad-branches (seq-remove #'wendel-magit/is-masterish (magit-list-merged-branches))))
     (if (> (length bad-branches) 0)
