@@ -37,7 +37,7 @@
   (setq web-mode-code-indent-offset 2))
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
- 
+
 ;; ;; linting:
 
 ;; disable jshint since we prefer eslint checking
@@ -63,3 +63,10 @@
 
 ;; ignore missing ';'
 (setq js2-strict-missing-semi-warning nil)
+
+;; json
+(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+
+;; smartparens
+(add-hook 'js2-mode-hook #'smartparens-mode)
+(add-hook 'json-mode-hook #'smartparens-mode)
