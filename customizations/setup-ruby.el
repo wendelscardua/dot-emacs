@@ -52,14 +52,6 @@
 (global-set-key (kbd "C-c s") 'hs-show-block)
 
 (define-key ruby-mode-map (kbd "C-c c") #'rubocop-autocorrect-current-file)
-(defun wendel-ruby/rubocop-changed-files ()
-  "Autocorrect changed files with rubocop, if changed compared to upstream."
-  (interactive)
-  (require 'rubocop)
-  (let ((changed-files (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref))))
-    (rubocop--dir-command rubocop-autocorrect-command (string-join changed-files " "))))
-
-(global-set-key (kbd "C-c x") #'wendel-ruby/rubocop-changed-files)
 
 ;; Fixes pry in rspec-compilation mode
 (add-hook 'compilation-filter-hook 'inf-ruby-auto-enter)
