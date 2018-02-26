@@ -77,8 +77,6 @@
 (global-set-key (kbd "C-c +") 'wendel/increment-number)
 (global-set-key (kbd "C-c -") 'wendel/decrement-number)
 
-(seq-filter (lambda (x) (string-match "\.rb$" x)) '("foo.rb" "bar.js" "quux.rb" "frob.rb" "what.js"))
-
 ;; autofix changed files
 (defun wendel/autofix-changed-files ()
   "Autocorrect changed files with linters (rubocop, eslint), if changed compared to upstream."
