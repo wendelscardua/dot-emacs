@@ -128,6 +128,8 @@ If point was already at that position, move point to beginning of line."
 (global-aggressive-indent-mode 1)
 (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
+(server-start)
+
 (require 'edit-server)
 (edit-server-start)
 
