@@ -82,13 +82,16 @@
   "Autocorrect changed files with linters (rubocop, eslint), if changed compared to upstream."
   (interactive)
   (require 'rubocop)
-  (let ((changed-files (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref))))
-    (let ((ruby-files (seq-filter (lambda (x) (string-match "\.rb$" x)) changed-files))
-          (js-files (seq-filter (lambda (x) (string-match "\.js$" x)) changed-files)))
-      (if (> (length ruby-files) 0)
-          (rubocop--dir-command rubocop-autocorrect-command (string-join ruby-files " ")))
-      (if (> (length js-files) 0)
-          (shell-command (concat "eslint --fix " (string-join js-files " ")))))))
+  (let ((original-directory default-directory))
+    (cd (projectile-project-root))
+    (let ((changed-files (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref))))
+      (let ((ruby-files (seq-filter (lambda (x) (string-match "\.rb$" x)) changed-files))
+            (js-files (seq-filter (lambda (x) (string-match "\.js$" x)) changed-files)))
+        (if (> (length ruby-files) 0)
+            (rubocop--dir-command rubocop-autocorrect-command (string-join ruby-files " ")))
+        (if (> (length js-files) 0)
+            (shell-command (concat "eslint --fix " (string-join js-files " "))))))
+    (cd original-directory)))
 
 (global-set-key (kbd "C-c x") #'wendel/autofix-changed-files)
 
