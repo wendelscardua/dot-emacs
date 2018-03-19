@@ -51,6 +51,31 @@
 (global-set-key (kbd "C-c h") 'hs-hide-block)
 (global-set-key (kbd "C-c s") 'hs-show-block)
 
+(require 'noflet)
+
+(defadvice compilation-start (around inhibit-display
+                                     (command &optional mode name-function highlight-regexp))
+  "Hides compilation buffer."
+  (if (not (string-match "^\\(find\\|ag\\|grep\\)" command))
+      (noflet ((display-buffer 'ignore)
+               (set-window-point 'ignore)
+               (goto-char 'ignore))
+        (fset 'display-buffer 'ignore)
+        (fset 'set-window-point 'ignore)
+        (fset 'goto-char 'ignore)
+        (save-window-excursion
+          ad-do-it))
+    ad-do-it))
+
+(defun wendel/rubocop-autocorrect-current-file-silently ()
+  "Silently run rubocop autocorrect, usually after a file being saved."
+  (ad-activate 'compilation-start)
+  (rubocop-autocorrect-current-file)
+  (ad-deactivate 'compilation-start))
+
+(add-hook 'ruby-mode-hook
+          (lambda () (add-hook 'after-save-hook #'wendel/rubocop-autocorrect-current-file-silently nil t)))
+
 (define-key ruby-mode-map (kbd "C-c c") #'rubocop-autocorrect-current-file)
 
 ;; Fixes pry in rspec-compilation mode
