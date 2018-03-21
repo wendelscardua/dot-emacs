@@ -37,6 +37,7 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.arb\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.env\\'" . sh-mode))
 (setq-default web-mode-auto-close-style 2)
 (setq-default web-mode-markup-indent-offset 2)
 
