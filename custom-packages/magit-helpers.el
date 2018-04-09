@@ -37,6 +37,8 @@
 ;;; Code:
 (require 'magit)
 
+(global-magit-file-mode)
+
 (defun wendel-magit/is-masterish (branch)
   "Tell if BRANCH is masterish (master or production)."
   (or (equal branch "master") (equal branch "production")))
