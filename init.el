@@ -25,6 +25,14 @@
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tls-checktrust t))
 
+(let ((uninstalled-packages
+       (seq-filter (lambda (package) (not (package-installed-p package))) package-selected-packages)))
+  (if uninstalled-packages
+      (progn
+        (package-refresh-contents)
+        (dolist (package uninstalled-packages)
+          (package-install package)))))
+
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/custom-packages")
 
