@@ -19,7 +19,6 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 40)
 
-
 ;; ido-mode allows you to more easily navigate choices. For example,
 ;; when you want to switch buffers, ido presents you with a list
 ;; of buffers in the the mini-buffer. As you start to type a buffer's
@@ -45,7 +44,6 @@
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-
 ;; Enhances M-x to allow easier execution of commands. Provides
 ;; a filterable list of possible commands in the minibuffer
 ;; http://www.emacswiki.org/emacs/Smex
@@ -55,3 +53,7 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
+
+;; fasd
+(global-set-key (kbd "C-?") 'fasd-find-file)
+(global-fasd-mode 1)

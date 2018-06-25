@@ -3,7 +3,7 @@ Personal `.emacs.d`
 
 This is my personal Emacs configuration (I'm currently using Emacs 25.2.2)
 
-It's currently used for Ruby (and maybe Clojure) development.
+It's currently used for Ruby development.
 
 
 Mostly used keybinds
