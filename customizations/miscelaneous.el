@@ -14,7 +14,6 @@
 ;; Projectile (?)
 (setq projectile-switch-project-action #'projectile-commander)
 (projectile-mode)
-(setq projectile-keymap-prefix (kbd "C-c p"))
 
 ;; flycheck
 
