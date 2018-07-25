@@ -101,3 +101,6 @@
 
 ;; auto revert
 (auto-revert-mode)
+
+;; open file at point
+(global-set-key (kbd "C-<return>") 'find-file-at-point)
