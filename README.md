@@ -34,6 +34,7 @@ Mostly used keybinds
 | C-M-- | Undo Tree Visualize |
 | C-c c | Rubocop autocorrect current file |
 | C-c x | Rubocop autocorrect all changed files |
+| C-<return> | Find file at point |
 
 Magit keybinds
 -----------------
