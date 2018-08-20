@@ -26,6 +26,10 @@
 (global-set-key (kbd "C-c g s") 'magit-status)
 (global-set-key (kbd "C-c g t") 'git-timemachine)
 
+(remove-hook 'magit-refs-sections-hook 'magit-insert-tags)
+(remove-hook 'server-switch-hook 'magit-commit-diff)
+(setq vc-handled-backends nil)
+
 ;; spotify
 (global-set-key (kbd "<f9>") #'spotify-previous)
 (global-set-key (kbd "<f10>") #'spotify-pause)
