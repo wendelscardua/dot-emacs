@@ -1,4 +1,3 @@
-(setq projectile-go-function #'projectile-go)
 (require 'package)
 
 (setq package-archives `(("gnu" . "https://elpa.gnu.org/packages/")
