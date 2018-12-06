@@ -74,9 +74,12 @@
   (interactive)
   (browse-url
    (format "%s/pull/new/%s"
-           (magit-get "remote"
-                      (magit-get-push-remote)
-                      "url")
+           (replace-regexp-in-string
+            "[.]git$"
+            ""
+            (magit-get "remote"
+                       (magit-get-push-remote)
+                       "url"))
            (magit-get-current-branch))))
 
 (magit-define-popup-action 'magit-branch-popup ?z "Cleanup" 'wendel-magit/cleanup-branches)
