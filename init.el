@@ -22,8 +22,11 @@
  '(package-selected-packages
    (quote
     (magit-todos fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game)))
- '(paradox-github-token t)
- '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(paradox-github-token t t)
+ '(safe-local-variable-values
+   (quote
+    ((magit-todos-exclude-globs "*.html" "*.erb" "*.js" "*.map" "*.svg")
+     (encoding . utf-8))))
  '(tls-checktrust t))
 
 (let ((uninstalled-packages
