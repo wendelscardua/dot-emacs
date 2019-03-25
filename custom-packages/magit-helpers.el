@@ -67,7 +67,7 @@
           (magit-run-git "branch" "-d" bad-branches))))
   (message "Final checkout master")
   (magit-checkout "master")
-  (magit-show-refs-popup))
+  (magit-show-refs))
 
 (defun wendel-magit/open-pull-request ()
   "Opens a pull request for current branch on Github."
@@ -82,6 +82,6 @@
                        "url"))
            (magit-get-current-branch))))
 
-(magit-define-popup-action 'magit-branch-popup ?z "Cleanup" 'wendel-magit/cleanup-branches)
-(magit-define-popup-action 'magit-branch-popup ?P "Pull Request" 'wendel-magit/open-pull-request)
+(transient-append-suffix 'magit-branch "k" '("z" "Cleanup" wendel-magit/cleanup-branches))
+(transient-append-suffix 'magit-branch "z" '("P" "Pull Request" wendel-magit/open-pull-request))
 ;;; magit-helpers.el ends here
