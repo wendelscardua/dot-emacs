@@ -68,15 +68,6 @@
           ad-do-it))
     ad-do-it))
 
-(defun wendel/rubocop-autocorrect-current-file-silently ()
-  "Silently run rubocop autocorrect, usually after a file being saved."
-  (ad-activate 'compilation-start)
-  (rubocop-autocorrect-current-file)
-  (ad-deactivate 'compilation-start))
-
-(add-hook 'ruby-mode-hook
-          (lambda () (add-hook 'after-save-hook #'wendel/rubocop-autocorrect-current-file-silently nil t)))
-
 (define-key ruby-mode-map (kbd "C-c c") #'rubocop-autocorrect-current-file)
 
 ;; Fixes pry in rspec-compilation mode
