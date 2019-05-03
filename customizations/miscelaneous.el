@@ -88,7 +88,7 @@
   (require 'rubocop)
   (let ((original-directory default-directory))
     (cd (projectile-project-root))
-    (let ((changed-files (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref))))
+    (let ((changed-files (seq-filter (lambda (x) (file-readable-p x)) (magit-git-items "diff" "-z" "--name-only" (magit-get-upstream-ref)))))
       (let ((ruby-files (seq-filter (lambda (x) (string-match "\.rb$" x)) changed-files))
             (js-files (seq-filter (lambda (x) (string-match "\.js$" x)) changed-files)))
         (if (> (length ruby-files) 0)
