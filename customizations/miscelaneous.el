@@ -108,3 +108,6 @@
 
 ;; open file at point
 (global-set-key (kbd "C-<return>") 'find-file-at-point)
+
+;; highlight in org-mode src
+(setq org-src-fontify-natively t)
