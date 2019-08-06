@@ -44,6 +44,7 @@
 ;; Loads custom packages
 (load "dedicate-windows-manually.el")
 (load "magit-helpers.el")
+(load "time-tracker-mode.el")
 (load "org-protocol-github-lines.el")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
