@@ -67,7 +67,7 @@
         (let* ((line (buffer-substring (point)
                                        (progn (forward-line 1) (point))))
                (minutes (seq-map #'time-tracker-minutify (cdr (split-string (replace-regexp-in-string "\s*#.*$" "" line) " ")))))
-          (if (= (length minutes) 4)
+          (if (and (> (length minutes) 0) (= (% (length minutes) 2) 0))
               (progn
                 (setq total (- total 480))
                 (seq-doseq (minute minutes)
@@ -95,9 +95,9 @@
 
 (defvar time-tracker-font-lock-keywords
   (list
-   '("\\<\\d\\d:\\d\\d\\>" . font-lock-string-face)
-   '("\\<\\d\\d:\\>" . font-lock-constant-face)
-   '("\\<#.*$" . font-lock-comment-face))
+   '("^[[:digit:]][[:digit:]]: " . font-lock-constant-face)
+   '("\\<[[:digit:]][[:digit:]]:[[:digit:]][[:digit:]]\\>" . font-lock-string-face)
+   )
   "Highlighting expressions for time tracker mode.")
 
 (defun time-tracker-mode ()
@@ -106,7 +106,7 @@
   (kill-all-local-variables)
   (set-syntax-table time-tracker-mode-syntax-table)
   (use-local-map time-tracker-mode-map)
-  (set (make-local-variable 'font-lock-defaults) '(time-tracker-font-lock-keywords))
+  (set (make-local-variable 'font-lock-defaults) '((time-tracker-font-lock-keywords)))
   (setq major-mode 'time-tracker-mode)
   (setq mode-name "Time Tracker")
   (run-hooks 'time-tracker-mode-hook))
