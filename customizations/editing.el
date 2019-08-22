@@ -134,6 +134,16 @@ If point was already at that position, move point to beginning of line."
 (require 'editorconfig)
 (editorconfig-mode 1)
 
+(require 'company-tabnine)
+(add-to-list 'company-backends #'company-tabnine)
+;; Run M-x company-tabnine-install-binary to install the TabNine binary for your system.
+
+;; Trigger completion immediately.
+(setq company-idle-delay 0)
+
+;; Number the candidates (use M-1, M-2 etc to select completions).
+(setq company-show-numbers t)
+
 (undo-tree-mode 1)
 (global-set-key (kbd "C-M--") 'undo-tree-visualize)
 
