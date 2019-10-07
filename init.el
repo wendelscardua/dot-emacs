@@ -79,6 +79,8 @@
 
 (load "setup-js.el")
 
+(setq-default shell-file-name "/bin/bash")
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
