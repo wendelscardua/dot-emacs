@@ -73,5 +73,8 @@
 ;; Fixes pry in rspec-compilation mode
 (add-hook 'compilation-filter-hook 'inf-ruby-auto-enter)
 
+;; Fixes cucumber paths
+(setq feature-step-search-path "features/**/*.rb")
+
 (provide 'setup-ruby)
 ;;; setup-ruby.el ends here
