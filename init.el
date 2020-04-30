@@ -19,8 +19,9 @@
  '(js2-getprop-has-side-effects t)
  '(package-selected-packages
    (quote
-    (company-tabnine htmlize fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game)))
+    (graphql-mode company-tabnine htmlize fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game)))
  '(paradox-github-token t)
+ '(rubocop-autocorrect-command "rubocop --force-exclusion -a --format emacs")
  '(rubocop-autocorrect-on-save t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
  '(tls-checktrust t))
