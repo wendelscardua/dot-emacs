@@ -64,6 +64,12 @@
 ;; ignore missing ';'
 (setq js2-strict-missing-semi-warning nil)
 
+;; Svelte
+
+;; use eslint with svelte-mode
+(flycheck-add-mode 'javascript-eslint 'svelte-mode)
+
+
 ;; json
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
