@@ -42,6 +42,7 @@
 (load "magit-helpers.el")
 (load "time-tracker-mode.el")
 (load "org-protocol-github-lines.el")
+(load "ca65-mode.el")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
