@@ -83,7 +83,7 @@
   (beginning-of-line)
   (if (bobp) ;; rule 1
       (indent-line-to 0)
-    (if (looking-at "^[ \t]*\\w*:") ;; rule 5
+    (if (looking-at "^[ \t]*@?\\w+:") ;; rule 5
         (indent-line-to 0)
       (let ((not-indented t) cur-indent)
         (if (looking-at "^[ \t]*[.]end") ;; rule 2
