@@ -38,11 +38,11 @@
 (add-to-list 'load-path "~/.emacs.d/custom-packages")
 
 ;; Loads custom packages
-(load "dedicate-windows-manually.el")
+;;(load "dedicate-windows-manually.el")
 (load "magit-helpers.el")
-(load "time-tracker-mode.el")
-(load "org-protocol-github-lines.el")
-(load "ca65-mode.el")
+;;(load "time-tracker-mode.el")
+;;(load "org-protocol-github-lines.el")
+(require 'ca65-mode)
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
