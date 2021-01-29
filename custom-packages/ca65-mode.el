@@ -76,7 +76,7 @@
 ;; 4. if before we have a .proc, .if*, .scope, .enum, .struct, increase indent
 ;; 5. labels ignore indent
 ;; 6. ignore indent otherwise
-
+;; 7. exception: empty label ':' is treated like space for indent purposes
 (defun ca65-indent-line ()
   "Indent current line as ca65 code."
   (interactive)
@@ -108,7 +108,19 @@
                   (if (bobp) ;; rule 6
                       (setq not-indented nil)))))))
         (if cur-indent
-            (indent-line-to cur-indent)
+            (if (looking-at "^[ \t]*:") ;; rule 7
+                (progn
+                  (re-search-forward "^[ \t]*:" nil t)
+                  (replace-match " ")
+                  (beginning-of-line)
+                  (indent-line-to cur-indent)
+                  (beginning-of-line)
+                  (if (looking-at " ")
+                      (progn
+                        (delete-char 1)
+                        (insert ":")
+                        (beginning-of-line))))
+              (indent-line-to cur-indent))
           (indent-line-to 0))))))
 
 (defvar ca65-mode-syntax-table
