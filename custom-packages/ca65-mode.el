@@ -60,7 +60,8 @@
            '("\\<[XY]\\>" . font-lock-keyword-face) ;; X, Y registers
            '("\\<[A-Z_][A-Z_]*\\>" . font-lock-constant-face)
            '("^[ \t]*@?\\w*:" . font-lock-type-face)
-           '("\\<[a-z_]\\w*\\>" . font-lock-variable-name-face)
+           '(":[+-]+" . font-lock-type-face)
+           '("\\<[A-Za-z_][A-Za-z0-9_]*\\>" . font-lock-variable-name-face)
            ))
   "More highlighting for ca65 mode."
   )
@@ -126,6 +127,8 @@
 (defvar ca65-mode-syntax-table
   (let ((st (make-syntax-table)))
     (modify-syntax-entry ?_ "w" st)
+    (modify-syntax-entry ?$ "w" st)
+    (modify-syntax-entry ?% "w" st)
     (modify-syntax-entry ?\; "<" st)
     (modify-syntax-entry ?\n ">" st)
     (modify-syntax-entry ?\" "\"" st)
