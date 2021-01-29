@@ -109,7 +109,7 @@
                   (if (bobp) ;; rule 6
                       (setq not-indented nil)))))))
         (if cur-indent
-            (if (looking-at "^[ \t]*:") ;; rule 7
+            (if (looking-at "^[ \t]*:.+\n") ;; rule 7
                 (progn
                   (re-search-forward "^[ \t]*:" nil t)
                   (replace-match " ")
@@ -121,7 +121,9 @@
                         (delete-char 1)
                         (insert ":")
                         (beginning-of-line))))
-              (indent-line-to cur-indent))
+              (if (looking-at "^[ \t]*:")
+                  (indent-line-to 0)
+                (indent-line-to cur-indent)))
           (indent-line-to 0))))))
 
 (defvar ca65-mode-syntax-table
