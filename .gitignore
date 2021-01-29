@@ -16,4 +16,6 @@
 /request
 /var
 /xkcd
+/transient
+/custom-packages
 private.el
