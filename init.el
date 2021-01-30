@@ -42,7 +42,6 @@
 (load "magit-helpers.el")
 ;;(load "time-tracker-mode.el")
 ;;(load "org-protocol-github-lines.el")
-(require 'ca65-mode)
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
@@ -75,6 +74,8 @@
   (load "setup-ruby.el"))
 
 (load "setup-js.el")
+
+(load "setup-ca65.el")
 
 (setq-default shell-file-name "/bin/bash")
 
