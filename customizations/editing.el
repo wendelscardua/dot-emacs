@@ -145,5 +145,9 @@ If point was already at that position, move point to beginning of line."
 ;; Number the candidates (use M-1, M-2 etc to select completions).
 (setq company-show-numbers t)
 
+;; Trim spaces
+(add-hook 'before-save-hook
+          'delete-trailing-whitespace)
+
 (provide 'editing)
 ;;; editing.el ends here
