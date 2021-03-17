@@ -149,5 +149,16 @@ If point was already at that position, move point to beginning of line."
 (add-hook 'before-save-hook
           'delete-trailing-whitespace)
 
+;; Yasnippet
+(require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"                 ;; personal snippets
+        ))
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "C-<tab>") yas-maybe-expand)
+
 (provide 'editing)
 ;;; editing.el ends here

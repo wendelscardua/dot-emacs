@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: exported .proc .. .endproc
+# key: .eproc
+# --
+.export $1
+.proc $1
+  ; input: $2
+
+  $0
+  RTS
+.endproc

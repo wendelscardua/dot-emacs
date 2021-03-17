@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: .proc ... .endproc
+# key: .proc
+# --
+.proc $1
+  ; input: $2
+
+  $0
+  RTS
+.endproc
