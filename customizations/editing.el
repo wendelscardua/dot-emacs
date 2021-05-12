@@ -160,5 +160,14 @@ If point was already at that position, move point to beginning of line."
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-<tab>") yas-maybe-expand)
 
+
+;;keys for navigation
+(define-key yas-keymap [(tab)]       nil)
+(define-key yas-keymap (kbd "TAB")   nil)
+(define-key yas-keymap [(shift tab)] nil)
+(define-key yas-keymap [backtab]     nil)
+(define-key yas-keymap (kbd "C-<tab>") 'yas-next-field-or-maybe-expand)
+(define-key yas-keymap (kbd "C-S-<tab>") 'yas-prev)
+
 (provide 'editing)
 ;;; editing.el ends here

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: xloop
+# key: xl
+# --
+  LDX #\$00
+${1:loop}:
+  $0
+
+  CPX $2
+  BNE $1
