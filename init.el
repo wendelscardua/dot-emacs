@@ -24,7 +24,8 @@
  '(rubocop-autocorrect-command "rubocop --force-exclusion -a --format emacs")
  '(rubocop-autocorrect-on-save t)
  '(safe-local-variable-values (quote ((encoding . utf-8))))
- '(tls-checktrust t))
+ '(tls-checktrust t)
+ '(typescript-indent-level 2))
 
 (let ((uninstalled-packages
        (seq-filter (lambda (package) (not (package-installed-p package))) package-selected-packages)))
