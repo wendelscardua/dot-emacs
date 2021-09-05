@@ -82,8 +82,25 @@ If region is active, apply to active region instead."
 (setq company-dabbrev-code-time-limit .2)
 (setq company-dabbrev-code-everywhere t)
 (setq company-dabbrev-code-other-buffers t)
-;;; This makes TAB a little more useful.
-(define-key company-active-map [tab] #'company-complete)
+
+;; snippet from https://emacs.stackexchange.com/a/24800
+(dolist (key '("<return>" "RET"))
+  ;; Here we are using an advanced feature of define-key that lets
+  ;; us pass an "extended menu item" instead of an interactive
+  ;; function. Doing this allows RET to regain its usual
+  ;; functionality when the user has not explicitly interacted with
+  ;; Company.
+  (define-key company-active-map (kbd key)
+    `(menu-item nil company-complete
+                :filter ,(lambda (cmd)
+                           (when (company-explicit-action-p)
+                             cmd)))))
+(define-key company-active-map (kbd "TAB") #'company-complete-selection)
+(define-key company-active-map (kbd "SPC") nil)
+
+;; Company appears to override the above keymap based on company-auto-complete-chars.
+;; Turning it off ensures we have full control.
+(setq company-auto-complete-chars nil)
 
 ;; smartparens
 (with-eval-after-load 'smartparens
