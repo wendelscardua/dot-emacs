@@ -13,6 +13,7 @@
  '(custom-safe-themes
    '("fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "53f97243218e8be82ba035ae34c024fd2d2e4de29dc6923e026d5580c77ff702" "8ed752276957903a270c797c4ab52931199806ccd9f0c3bb77f6f4b9e71b9272" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "5999e12c8070b9090a2a1bbcd02ec28906e150bb2cdce5ace4f965c76cf30476" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default))
  '(feature-use-docker-compose nil)
+ '(flycheck-c/c++-clang-executable "mos-nes-action53-clang")
  '(inhibit-startup-screen t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(js2-getprop-has-side-effects t)
@@ -81,6 +82,7 @@
 (load "flycheck-ca65.el")
 (load "flycheck-cc65.el")
 (load "setup-ca65.el")
+(load "setup-cc65.el")
 
 (load "nesfab-mode.el")
 
