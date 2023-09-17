@@ -17,8 +17,12 @@
  '(inhibit-startup-screen t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(js2-getprop-has-side-effects t)
+ '(lsp-ui-sideline-show-code-actions t)
+ '(lsp-ui-sideline-show-diagnostics t)
+ '(lsp-ui-sideline-show-hover t)
+ '(native-comp-async-report-warnings-errors nil)
  '(package-selected-packages
-   '(cmake-mode lsp-mode python-x ninja-mode git-modes lua-mode yasnippet ca65-mode package-lint crystal-mode graphql-mode use-package eslint-fix flymake-eslint flycheck svelte-mode company-tabnine htmlize fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game))
+   '(helm-lsp lsp-ui cmake-mode lsp-mode flycheck-rust rust-mode python-x ninja-mode git-modes lua-mode yasnippet ca65-mode package-lint crystal-mode graphql-mode use-package eslint-fix flymake-eslint flycheck svelte-mode company-tabnine htmlize fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game))
  '(paradox-github-token t)
  '(rubocop-autocorrect-command "rubocop --force-exclusion -a --format emacs")
  '(rubocop-autocorrect-on-save t)
@@ -76,9 +80,23 @@
 (load "setup-js.el")
 
 (load "flycheck-ca65.el")
+(load "flycheck-cc65.el")
 (load "setup-ca65.el")
 
 (load "nesfab-mode.el")
+
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  :hook ((c++-mode . lsp-deferred))
+  :commands lsp-deferred)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+
+(define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
+
+(add-hook 'rust-mode-hook #'flycheck-rust-setup)
 
 (setq-default shell-file-name "/bin/bash")
 

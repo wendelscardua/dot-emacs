@@ -145,6 +145,9 @@ If point was already at that position, move point to beginning of line."
 (global-aggressive-indent-mode 1)
 (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
+(add-to-list 'aggressive-indent-dont-indent-if
+             '(and (eq (char-before) ?\s) (looking-at-p "$")))
+
 (unless (server-running-p)
   (server-start))
 
