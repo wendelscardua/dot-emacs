@@ -144,9 +144,7 @@ If point was already at that position, move point to beginning of line."
 
 (global-aggressive-indent-mode 1)
 (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
-
-(add-to-list 'aggressive-indent-dont-indent-if
-             '(and (eq (char-before) ?\s) (looking-at-p "$")))
+(add-to-list 'aggressive-indent-excluded-modes 'c++-mode)
 
 (unless (server-running-p)
   (server-start))
@@ -157,7 +155,7 @@ If point was already at that position, move point to beginning of line."
 (undo-tree-mode 1)
 (global-set-key (kbd "C-M--") 'undo-tree-visualize)
 
-(add-to-list 'company-backends #'company-tabnine)
+(add-to-list 'company-backends '(company-capf :with company-tabnine))
 
 ;; Trigger completion immediately.
 (setq company-idle-delay 0)
