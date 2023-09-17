@@ -82,6 +82,7 @@
 (load "flycheck-ca65.el")
 (load "flycheck-cc65.el")
 (load "setup-ca65.el")
+(load "setup-cc65.el")
 
 (load "nesfab-mode.el")
 
