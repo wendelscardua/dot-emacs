@@ -17,6 +17,9 @@
  '(inhibit-startup-screen t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(js2-getprop-has-side-effects t)
+ '(lsp-disabled-clients '(rubocop-ls ruby-lsp-ls typeprof-ls ruby-syntax-tree-ls))
+ '(lsp-ruby-lsp-use-bundler nil)
+ '(lsp-solargraph-use-bundler t)
  '(lsp-ui-sideline-show-code-actions t)
  '(lsp-ui-sideline-show-diagnostics t)
  '(lsp-ui-sideline-show-hover t)
@@ -90,12 +93,13 @@
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
-  :hook ((c++-mode . lsp-deferred))
+  :hook (
+         (c++-mode . lsp-deferred)
+         (ruby-mode . lsp-deferred)
+         )
   :commands lsp-deferred)
 
 (use-package lsp-ui :commands lsp-ui-mode)
-
-(define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
 
 (add-hook 'rust-mode-hook #'flycheck-rust-setup)
 

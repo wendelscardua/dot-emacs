@@ -23,8 +23,6 @@
                      file-name
                    (projectile-find-matching-test file-name))))))))
 (add-hook 'ruby-mode-hook #'endless/ruby-setup)
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
 (add-hook 'ruby-mode-hook #'robe-mode)
 (require 'smartparens-config)
 (require 'smartparens-ruby)
