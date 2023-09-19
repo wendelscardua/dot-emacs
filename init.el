@@ -82,6 +82,8 @@
 
 (load "setup-js.el")
 
+(load "setup-cpp.el")
+
 (load "flycheck-ca65.el")
 (load "flycheck-cc65.el")
 (load "setup-ca65.el")
