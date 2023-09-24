@@ -25,7 +25,7 @@
  '(lsp-ui-sideline-show-hover t)
  '(native-comp-async-report-warnings-errors nil)
  '(package-selected-packages
-   '(rbs-mode helm-lsp cmake-mode flycheck-rust rust-mode python-x ninja-mode git-modes lua-mode yasnippet ca65-mode package-lint crystal-mode graphql-mode use-package eslint-fix flymake-eslint flycheck svelte-mode company-tabnine htmlize fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game))
+   '(seq rbs-mode helm-lsp cmake-mode flycheck-rust rust-mode python-x ninja-mode git-modes lua-mode yasnippet ca65-mode package-lint crystal-mode graphql-mode use-package eslint-fix flymake-eslint flycheck svelte-mode company-tabnine htmlize fish-mode fasd diary-manager nginx-mode noflet js2-mode json-mode solarized-theme dimmer typescript-mode csharp-mode yaml-mode window-jump web-mode web-completion-data undo-tree twittering-mode tagedit spotify smex smartparens smart-mode-line-powerline-theme rubocop rspec-mode robe restclient-helm rainbow-mode rainbow-delimiters projectile-rails project-explorer paredit paradox neotree multiple-cursors multi-term minesweeper magit-gh-pulls magit-filenotify keyfreq highlight-indentation helm-projectile helm-ag goto-last-change gmail-message-mode git-timemachine flycheck-clojure feature-mode expand-region exec-path-from-shell enh-ruby-mode emojify dockerfile-mode cycle-quotes copy-as-format company-restclient clojure-mode-extra-font-locking aggressive-indent ag ace-jump-mode 4clojure 2048-game))
  '(paradox-github-token t)
  '(rubocop-autocorrect-command "rubocop --force-exclusion -a --format emacs")
  '(rubocop-autocorrect-on-save t)
@@ -40,6 +40,16 @@
         (package-refresh-contents)
         (dolist (package uninstalled-packages)
           (package-install package)))))
+
+;; TODO(rm): remove workaround.
+;;
+;; New versions of magit require seq-2.24. However, GNU Emacs 28.2
+;; comes with seq-2.23 built in and built-in packages are not upgraded
+;; automatically. Thus, we need to install seq-2.24 manually. Also,
+;; the function seq-keep used by magit is not autoloaded and, on top
+;; of that, it seems the seq feature is already provided by the
+;; built-in package by the time it is required here. So, reload seq.
+(load "seq")
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/custom-packages")
