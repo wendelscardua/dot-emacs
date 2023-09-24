@@ -74,9 +74,9 @@
 ;; scroll one line at a time (less "jumpy" than defaults)
 
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-    
+
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-    
+
 (setq mouse-wheel-follow-mouse t) ;; scroll window under mouse
 
 (setq scroll-step 1) ;; keyboard scroll one line at a time
@@ -152,6 +152,18 @@
 
 ;; dimmer
 (dimmer-mode)
+
+;; avoid suspending gui
+(global-unset-key (kbd "C-z"))
+
+(global-set-key (kbd "C-z C-z") 'my-suspend-frame)
+
+(defun my-suspend-frame ()
+  "In a GUI environment, do nothing; otherwise `suspend-frame'."
+  (interactive)
+  (if (display-graphic-p)
+      (message "suspend-frame disabled for graphical displays.")
+    (suspend-frame)))
 
 (provide 'ui)
 ;;; ui.el ends here
